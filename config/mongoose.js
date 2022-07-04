@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 module.exports = app => {
-    mongoose.connect('mongodb://localhost:27017/cart', {
+    mongoose.connect('mongodb://localhost:27017/database', {
         useUnifiedTopology: true,
         useNewUrlParser: true,
        // useFindAndModify: false
