@@ -1,4 +1,7 @@
+
 const productRepository = require('./repository')
+const path = require("path")
+
 exports.createProduct = async (req, res) => {
     try {
         console.log(req.body)
@@ -53,6 +56,11 @@ exports.getProductById = async (req, res) => {
         })
     }
 }
+
+//exports.upload = async(req,res)=>{
+    //console.log(req.file)
+   // res.json({status:"success"})
+//}
 exports.removeProduct = async (req, res) => {
     try {
         let id = req.params.id

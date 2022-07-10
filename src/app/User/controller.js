@@ -24,6 +24,7 @@ router.post('/user', async (req, res) => {
         phone: req.body.phone,
         address: req.body.address,
         password: req.body.password,
+        role:req.body.role
     })
     users.push(user)
     user.save(function (err, res) {
@@ -60,7 +61,7 @@ router.post('/users/login', async (req, res) => {
         }) 
         // res.cookie('token',accesstoken,{expires:new Date()+1})
         // return res.json({user,token:accesstoken,msg:"LoggedIn"})
-      return  res.header('auth-token',accesstoken).send(accesstoken)
+      return  res.header('auth-token',accesstoken).send("loggedIn")
       } else {
         res.send('Not Allowed')
       }
